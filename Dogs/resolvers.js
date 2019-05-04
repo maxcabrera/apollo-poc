@@ -1,8 +1,8 @@
-const { Dog } = require('./Dog');
+const { Dogs } = require('./Dogs');
 
 const resolvers = {
   Query: {
-    dogs: () => Dog.all(),
+    dogs: () => Dogs.all(),
   }
 }
 

@@ -32,5 +32,5 @@ const dogs = [
 ];
 
 module.exports = {
-  dogs
+  data: dogs,
 }
