@@ -12,10 +12,18 @@ const typeDefs = gql`
     DOG
     CAT
   }
- 
+  
   type Animal {
     image: String
     type: AnimalType
+  }
+
+  type Cat {
+    image: String
+  }
+  
+  type Dog {
+    image: String
   }
 
   type Query {
@@ -23,7 +31,8 @@ const typeDefs = gql`
     The animals query is used to retrieve 2 photos of animals at the same time,
     the results could have photos of dogs, cats or both
     """
-    animals: [Animal]
+    cats: [Cat]
+    dogs: [Dog]
   }
 `;
 
@@ -31,7 +40,8 @@ const typeDefs = gql`
 // schema.  We'll retrieve books from the "books" array above.
 const resolvers = {
   Query: {
-    animals: () => animals
+    cats: () => animals,
+    dogs: () => animals
   },
 };
 
